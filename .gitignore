@@ -1,0 +1,7 @@
+node_modules/
+.next/
+out/
+dist/
+cache/
+*.log
+next-env.d.ts

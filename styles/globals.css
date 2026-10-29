@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --off-white: #FCF9F6;
+  --cream: #F5ECE8;
+  --gold: #A96F79;
+  --gold-light: #DAB6B4;
+  --gold-dark: #80505A;
+  --gold-muted: #C89DA2;
+  --text-dark: #40333A;
+  --text-mid: #74636B;
+  --text-light: #93858A;
+  --border: rgba(137, 91, 105, 0.20);
+  --border-strong: rgba(137, 91, 105, 0.42);
+
+  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-great-vibes: 'Great Vibes', cursive;
+  --font-arabic-classic: 'Amiri', 'Noto Naskh Arabic', serif;
+  --font-arabic-special: 'Aref Ruqaa', 'Amiri', 'Noto Naskh Arabic', serif;
+  --font-arabic-special-2: 'Aref Ruqaa Ink', 'Amiri', 'Noto Naskh Arabic', serif;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FAF7F0;
+  color: #3B3A36;
+  font-family: 'Montserrat', 'Amiri', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Stitch "Serenade & Gilt" design */
+.font-cormorant { font-family: 'Cormorant Garamond', 'Amiri', serif; }
+.font-playfair { font-family: 'Playfair Display', 'Amiri', serif; }
+.font-amiri { font-family: 'Amiri', serif; }
+
+/* Arabic mode: letter-spacing breaks joined Arabic letters, and slanted Arabic reads poorly */
+[dir="rtl"] * { letter-spacing: 0 !important; }
+[dir="rtl"] .italic { font-style: normal; }
+
+.gilded-arch {
+  border: 1.5px solid #D4AF37;
+  border-radius: 9999px 9999px 8px 8px;
+  position: relative;
+}
+.gilded-arch::after {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 9999px 9999px 6px 6px;
+  pointer-events: none;
+}
+
+.gilded-border {
+  border: 1px solid #D4AF37;
+  position: relative;
+}
+.gilded-border::after {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  pointer-events: none;
+}
+
+.watercolor-wash {
+  background: radial-gradient(circle at 50% 50%, rgba(228, 233, 218, 0.6) 0%, rgba(250, 247, 240, 0) 70%);
+}
+
+.soft-shadow {
+  box-shadow: 0 15px 35px -10px rgba(52, 59, 44, 0.1);
+}
+
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 24px auto;
+  width: 100%;
+}
+
+.ornament-line {
+  flex: 1;
+  max-width: 80px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold-muted));
+}
+
+.ornament-line.right {
+  background: linear-gradient(to left, transparent, var(--gold-muted));
+}
+
+.ornament-diamond {
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.ornament-diamond-sm {
+  width: 4px;
+  height: 4px;
+  background: var(--gold-light);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.photo-gallery {
+  padding: 96px 24px 104px;
+  background: var(--off-white);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.photo-gallery__inner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.photo-gallery__header {
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.photo-gallery__eyebrow {
+  margin-bottom: 14px;
+  color: var(--gold);
+  font-family: var(--font-montserrat);
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.photo-gallery__header h2 {
+  color: var(--text-dark);
+  font-family: var(--font-great-vibes);
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.photo-gallery__intro {
+  margin-top: 12px;
+  color: var(--text-mid);
+  font-family: var(--font-cormorant);
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.photo-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: repeat(2, 230px);
+  gap: 14px;
+}
+
+.photo-gallery__item {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.photo-gallery__item::after {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  content: "";
+  pointer-events: none;
+}
+
+.photo-gallery__item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.photo-gallery__item:hover img {
+  transform: scale(1.035);
+}
+
+.photo-gallery__portrait {
+  grid-column: span 5;
+  grid-row: span 2;
+}
+
+.photo-gallery__portrait img {
+  object-position: center 28%;
+}
+
+.photo-gallery__candid,
+.photo-gallery__rings,
+.photo-gallery__engagement,
+.photo-gallery__together {
+  grid-column: span 3;
+}
+
+.photo-gallery__candid img {
+  object-position: center 28%;
+}
+
+.photo-gallery__rings img {
+  object-position: center 42%;
+}
+
+.photo-gallery__engagement img {
+  object-position: center 35%;
+}
+
+.photo-gallery__together img {
+  object-position: center 30%;
+}
+
+[dir="rtl"] .photo-gallery__eyebrow {
+  font-family: var(--font-arabic-classic);
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+[dir="rtl"] .photo-gallery__header h2 {
+  font-family: var(--font-arabic-special);
+  font-size: 42px;
+}
+
+[dir="rtl"] .photo-gallery__intro {
+  font-family: var(--font-arabic-classic);
+}
+
+@media (max-width: 700px) {
+  .photo-gallery {
+    padding: 72px 18px 76px;
+  }
+
+  .photo-gallery__header {
+    margin-bottom: 28px;
+  }
+
+  .photo-gallery__header h2 {
+    font-size: 40px;
+  }
+
+  .photo-gallery__intro {
+    font-size: 17px;
+  }
+
+  .photo-gallery__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 310px repeat(2, 190px);
+    gap: 10px;
+  }
+
+  .photo-gallery__portrait {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .photo-gallery__candid,
+  .photo-gallery__rings,
+  .photo-gallery__engagement,
+  .photo-gallery__together {
+    grid-column: span 1;
+  }
+}
+
+/* Gentle floral invitation details */
+::selection { background: rgba(169, 111, 121, 0.2); color: var(--text-dark); }
+button, input, textarea { -webkit-tap-highlight-color: transparent; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+
+/* Depth & motion */
+
+/* Soft vignette that fades photos into the cream page */
+.photo-fade { position: relative; }
+.photo-fade::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(to top, rgba(35, 40, 30, 0.22), transparent 40%),
+    radial-gradient(120% 90% at 50% 40%, transparent 55%, rgba(250, 247, 240, 0.35));
+}
+
+/* Main cards: offset gold hairline frame and layered shadow */
+.card-lux {
+  outline: 1px solid rgba(212, 175, 55, 0.35);
+  outline-offset: 6px;
+  box-shadow: 0 30px 60px -30px rgba(52, 59, 44, 0.35), 0 12px 24px -16px rgba(52, 59, 44, 0.18);
+  transition: box-shadow 0.4s ease, outline-offset 0.4s ease;
+}
+.card-lux:hover {
+  outline-offset: 9px;
+  box-shadow: 0 40px 70px -30px rgba(52, 59, 44, 0.42), 0 16px 30px -16px rgba(52, 59, 44, 0.2);
+}
+
+/* Buttons: inner gold hairline, hover lift and shine */
+.btn-lux {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 2px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+}
+.btn-lux::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 1px solid rgba(230, 202, 133, 0.45);
+  pointer-events: none;
+}
+.btn-lux::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -75%;
+  width: 50%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.7s ease;
+  pointer-events: none;
+}
+.btn-lux:hover { transform: translateY(-2px); box-shadow: 0 12px 24px -10px rgba(169, 130, 28, 0.55); }
+.btn-lux:hover::after { left: 125%; }
+.btn-lux:active { transform: translateY(0); }
+.btn-lux:focus-visible { outline: 2px solid #D4AF37; outline-offset: 3px; }
+.btn-lux:disabled { transform: none; box-shadow: none; }
+
+/* Hero entrance on load */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: none; }
+}
+#home .grid > * { animation: fade-up 1.1s cubic-bezier(0.22, 0.61, 0.36, 1) both; }
+#home .grid > *:nth-child(2) { animation-delay: 0.25s; }
+
+/* Scroll reveal: .reveal is added in pages/index.tsx to sections below the fold */
+.reveal > div {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s cubic-bezier(0.22, 0.61, 0.36, 1), transform 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.reveal .grid > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.9s ease var(--d, 0s), transform 0.9s ease var(--d, 0s), box-shadow 0.4s ease, outline-offset 0.4s ease;
+}
+.reveal .grid > *:nth-child(2) { --d: 0.15s; }
+.reveal .grid > *:nth-child(3) { --d: 0.3s; }
+.reveal .grid > *:nth-child(4) { --d: 0.45s; }
+.reveal img {
+  opacity: 0;
+  filter: blur(8px) saturate(0.85);
+  transition: opacity 1.4s ease 0.2s, filter 1.4s ease 0.2s, transform 0.7s ease;
+}
+.reveal.is-visible > div,
+.reveal.is-visible .grid > * { opacity: 1; transform: none; }
+.reveal.is-visible img { opacity: 1; filter: none; }
