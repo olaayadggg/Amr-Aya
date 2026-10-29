@@ -13,7 +13,7 @@ export default function BlessingSection({ lang }: Props) {
         <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-6 z-20">
             <div className="card-lux bg-white p-8 md:p-12 border border-gold-300 relative">
-              <h4 className="font-amiri text-2xl md:text-3xl text-olive-900 font-bold mb-4 leading-relaxed">
+              <h4 className="font-amiri text-2xl md:text-3xl text-olive-900 font-bold mb-4 text-center leading-relaxed">
                 « بَارَكَ اللهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ »
               </h4>
               {!isAr && (
