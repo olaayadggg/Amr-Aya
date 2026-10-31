@@ -10,34 +10,8 @@ export default function OurStory({ lang }: Props) {
   return (
     <section className="py-20 md:py-28 relative" id="about">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          <div className="lg:col-span-5 order-2 lg:order-1">
-            <span className="text-xs uppercase tracking-[0.25em] text-gold-600 font-semibold block mb-2">
-              {isAr ? "حكايتنا" : "Our Story"}
-            </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair font-normal text-olive-900 mb-6 leading-tight">
-              {isAr ? "بدأت بكلمة، وكبرت بدعوة" : "It Started with a Hello"}
-            </h2>
-            <p className="text-olive-700 text-sm md:text-base leading-relaxed mb-4">
-              {isAr
-                ? "من أول حديث بيننا، شعرنا أننا وجدنا شيئًا مميزًا. ضحكنا كثيرًا، ودعونا كثيرًا، وعرفنا أن الله كتب لنا الخير معًا."
-                : "From our very first chat, we knew we'd found something special. Lots of laughs and lots of prayers later, we're sure Allah brought us together."}
-            </p>
-            <p className="text-olive-700 text-sm md:text-base leading-relaxed mb-6">
-              {isAr
-                ? "كتبنا كتابنا وسط عائلتينا، والآن نستعد لأجمل يوم في حياتنا، ولن يكتمل فرحنا إلا بوجودكم معنا."
-                : "We signed our Katb El-Kitab with our families by our side, and now we're getting ready for the big day. It wouldn't be the same without you!"}
-            </p>
-            {/* <div className="pt-2">
-              <a
-                className="btn-lux inline-block px-7 py-3 bg-charcoal-800 text-cream-50 hover:bg-gold-500 text-xs uppercase tracking-widest font-medium"
-                href="#gallery"
-              >
-                {isAr ? "شاهد صورنا" : "See Our Photos"}
-              </a>
-            </div> */}
-          </div>
-
+        <div className=" items-center">
+         
           <div className="lg:col-span-7 order-1 lg:order-2 flex justify-center">
             <div className="relative max-w-md w-full">
               <div className="gilded-border card-lux p-3 bg-white">
@@ -49,7 +23,7 @@ export default function OurStory({ lang }: Props) {
                   />
                 </div>
               </div>
-              <div className="absolute -bottom-6 -start-6 bg-white/95 backdrop-blur-md p-4 border border-gold-300 shadow-lg max-w-xs hidden sm:block">
+              <div className="absolute z-10 -bottom-6 start-3 sm:-start-6 bg-white/95 backdrop-blur-md p-4 border border-gold-300 shadow-lg max-w-[85%] sm:max-w-xs">
                 <p className="font-cormorant italic text-lg text-olive-900 leading-snug">
                   {isAr
                     ? "\"معًا، اليوم وكل يوم.\""

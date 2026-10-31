@@ -30,8 +30,8 @@ export default function CeremonyVenue({ lang }: Props) {
           </h2>
           <p className="text-olive-600 text-sm">
             {isAr
-              ? "يسعدنا أن تشاركونا أمسية من الفرح والبركة والعشاء والاحتفال."
-              : "Please join us for an evening of joyous spiritual union, dinner, and cherished celebration."}
+              ? "يسعدنا أن تشاركونا أمسية من الفرح والبركة والاحتفال."
+              : "Please join us for an evening of joyous spiritual union, and cherished celebration."}
           </p>
         </div>
 
